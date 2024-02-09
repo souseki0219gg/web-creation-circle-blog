@@ -1,43 +1,79 @@
-/* リンクのホバー時とアクティブ時のスタイル */
-nav ul li a:hover, nav ul li a.active {
-    color: #007bff; /* 明るい青色 */
-    text-decoration: underline;
+ody, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ナビゲーションバーの改善 */
-nav {
-    background-color: #ffffff; /* ナビゲーションバーの背景色 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影を追加 */
+header, footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #f3f3f3;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #f3f3f3;
 }
 
-/* ナビゲーションリンクのパディングを増やしてタップしやすくする */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
 nav ul li a {
-    padding: 10px 15px;
-    display: inline-block; /* パディングを適用 */
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px; /* 角を丸くする */
 }
 
-/* フッターのスタイル */
-footer {
-    background-color: #333; /* フッターの背景色を濃いめに */
-    color: #fff; /* フッターのテキストを白色に */
-    padding: 20px 0; /* パディングを増やす */
+nav ul li a:hover, nav ul li a.active {
+    background-color: #007bff; /* ホバーまたはアクティブリンクの背景色 */
+    color: #fff; /* ホバーまたはアクティブリンクのテキスト色 */
 }
 
-/* メインコンテンツとサイドバーの区切り */
-#home, #content article, aside {
-    border: 1px solid #eaeaea; /* 境界線を追加 */
-    background-color: #fff; /* 背景色を白に */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* やさしい影を追加 */
+/* モバイルフレンドリーなデザイン */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* スマホ表示では縦並び */
+        margin: 10px 0;
+    }
+}
+main {
+    display: flex;
+    margin: 20px;
 }
 
-/* テキストの可読性を向上 */
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+#home {
+    flex: 1; /* ホームセクションの幅を調整 */
+    padding: 20px;
 }
 
-/* コンテンツ内の見出しスタイル */
-h1, h2, h3, h4, h5, h6 {
-    color: #333; /* 見出しの色 */
+#content {
+    flex: 3; /* コンテンツセクションの幅を調整 */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+article, aside {
+    margin-bottom: 20px;
+}
+
+/* 見た目を整えるための余分なスタイル */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
