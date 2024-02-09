@@ -1,0 +1,43 @@
+/* リンクのホバー時とアクティブ時のスタイル */
+nav ul li a:hover, nav ul li a.active {
+    color: #007bff; /* 明るい青色 */
+    text-decoration: underline;
+}
+
+/* ナビゲーションバーの改善 */
+nav {
+    background-color: #ffffff; /* ナビゲーションバーの背景色 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影を追加 */
+}
+
+/* ナビゲーションリンクのパディングを増やしてタップしやすくする */
+nav ul li a {
+    padding: 10px 15px;
+    display: inline-block; /* パディングを適用 */
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #333; /* フッターの背景色を濃いめに */
+    color: #fff; /* フッターのテキストを白色に */
+    padding: 20px 0; /* パディングを増やす */
+}
+
+/* メインコンテンツとサイドバーの区切り */
+#home, #content article, aside {
+    border: 1px solid #eaeaea; /* 境界線を追加 */
+    background-color: #fff; /* 背景色を白に */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* やさしい影を追加 */
+}
+
+/* テキストの可読性を向上 */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* コンテンツ内の見出しスタイル */
+h1, h2, h3, h4, h5, h6 {
+    color: #333; /* 見出しの色 */
+}
