@@ -1,7 +1,10 @@
-ody, html {
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif; /* より読みやすいフォントに変更 */
+    color: #333; /* より読みやすいテキスト色に変更 */
+    line-height: 1.6; /* 行の高さを調整し、読みやすくする */
 }
 
 header, footer {
@@ -35,19 +38,25 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 /* モバイルフレンドリーなデザイン */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    #content, article, aside {
+        flex-direction: column; /* スクリーンが小さい時は縦並びに */
+        padding: 15px; /* パディングを少し減らしてスペースを最適化 */
+    }
+
     nav ul li {
-        display: block; /* スマホ表示では縦並び */
-        margin: 10px 0;
+        display: block; /* ナビゲーションアイテムを縦並びに */
+        margin: 5px 0; /* アイテム間のマージンを調整 */
     }
 }
+
 main {
     display: flex;
     margin: 20px;
 }
 
 #home {
-    flex: 1; /* ホームセクションの幅を調整 */
+    flex: 6; /* ホームセクションの幅を調整 */
     padding: 20px;
 }
 
@@ -58,22 +67,66 @@ main {
     padding: 20px;
 }
 
+
 article, aside {
-    margin-bottom: 20px;
+    border: 1px solid #ccc; /* 軽いボーダーを追加 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ソフトなシャドウを追加 */
+    border-radius: 5px; /* 角を丸くする */
+    margin-top: 20px; /* 上部にマージンを追加してさらにスペースを作る */
+    padding: 20px; /* パディングを20pxに設定 */
+    background-color: #f0f0f0; /* 背景色 */
 }
 
-/* 見た目を整えるための余分なスタイル */
-nav ul {
-    list-style-type: none;
-    padding: 0;
+article h3 {
+    color: #007bff; /* タイトルの色を鮮やかに */
+    margin-bottom: 10px; /* タイトルの下の余白を設定 */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+article p {
+    margin-bottom: 10px; /* 段落間の余白を設定 */
 }
 
-a {
-    text-decoration: none;
-    color: #000;
+article a {
+    color: #007bff; /* リンクの色を設定 */
+    font-weight: bold; /* リンクを目立たせるために太字に */
 }
+
+aside h3 {
+    font-size: 1.2em; /* タイトルのフォントサイズ */
+    color: #d35400; /* タイトルの色を変更 */
+    margin-bottom: 20px; /* タイトル下の余白 */
+    text-transform: uppercase; /* タイトルのテキストを大文字に */
+}
+
+aside ul {
+    padding-left: 0; /* リストのパディングを取り除く */
+}
+
+aside ul li {
+    position: relative;
+    margin-bottom: 10px; /* リストアイテム間のマージン */
+    padding: 10px;
+    background-color: #f9f9f9; /* アイテムの背景色 */
+    border-left: 5px solid #d35400; /* 左側のアクセントボーダー */
+    list-style-type: none; /* リストマーカーを非表示に */
+}
+
+aside ul li a {
+    color: #333; /* リンクの色 */
+    text-decoration: none; /* アンダーラインを非表示に */
+    font-weight: 600; /* テキストを少し太く */
+}
+
+aside ul li:hover {
+    background-color: #f0f0f0; /* ホバー時の背景色を変更 */
+    border-left: 5px solid #e67e22; /* ホバー時の左側のボーダー色を変更 */
+}
+
+aside ul li a:hover {
+    color: #e67e22; /* ホバー時のリンクの色を変更 */
+}
+
+
+
+
+
