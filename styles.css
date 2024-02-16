@@ -93,7 +93,7 @@ article a {
 
 aside h3 {
     font-size: 1.2em; /* タイトルのフォントサイズ */
-    color: #d35400; /* タイトルの色を変更 */
+    color: #007bff; /* タイトルの色を変更 */
     margin-bottom: 20px; /* タイトル下の余白 */
     text-transform: uppercase; /* タイトルのテキストを大文字に */
 }
@@ -107,7 +107,7 @@ aside ul li {
     margin-bottom: 10px; /* リストアイテム間のマージン */
     padding: 10px;
     background-color: #f9f9f9; /* アイテムの背景色 */
-    border-left: 5px solid #d35400; /* 左側のアクセントボーダー */
+    border-left: 5px solid #007bff; /* 左側のアクセントボーダー */
     list-style-type: none; /* リストマーカーを非表示に */
 }
 
@@ -119,11 +119,27 @@ aside ul li a {
 
 aside ul li:hover {
     background-color: #f0f0f0; /* ホバー時の背景色を変更 */
-    border-left: 5px solid #e67e22; /* ホバー時の左側のボーダー色を変更 */
+    border-left: 5px solid #0048cc; /* ホバー時の左側のボーダー色を変更 */
 }
 
 aside ul li a:hover {
-    color: #e67e22; /* ホバー時のリンクの色を変更 */
+    color: #0048cc; /* ホバー時のリンクの色を変更 */
+}
+
+aside ul li .post-link {
+    display: flex; /* Flexboxを有効化 */
+    align-items: center; /* アイテムを中央揃え */
+    justify-content: space-between; /* テキストと画像の間にスペースを作る */
+    text-decoration: none; /* アンダーラインを非表示に */
+}
+
+aside ul li .post-link span {
+    flex: 1; /* テキストが利用可能なスペースを埋めるように */
+    margin-right: 10px; /* テキストと画像の間に余白を設ける */
+}
+
+aside ul li .post-link img {
+    flex-shrink: 0; /* 画像が縮小しないように */
 }
 
 
